@@ -28,10 +28,10 @@ The key mapping follows:
 * q: quit
 
 
-### Flat7
+### term7
 Conceptually, this is a flat representation of a 2x2x2 cube with one missing that allows sliding permutations.  Here, the cubelets are labelled 1..7.
 
-### FlatAZ
+### term26
 Conceptually, this is a flat representation of a 3x3x3 cube with one missing that allows sliding permutations.  Thus, the cubelets are conveniently labelled with the english alphabet.
 
 ## Build Instructions:
