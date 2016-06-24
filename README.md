@@ -1,5 +1,6 @@
 # TerminalApps
 Fun puzzle games that run on any terminal on any OS.
+Grab source at "termapps25jun16.tar" under release.
 
 
 # TerminalApps v 1.0.0
