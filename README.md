@@ -46,17 +46,17 @@ Both the "a2z" and "seven" puzzles work the same:
 
 A character in an adjacent row, column, or layer may be moved to the empty space using the keyboard.
 
-Typically, the <home> key produces the character 'H'.  So assuming that <home>=>'H', <end>=>'F', <up>=>'A', etc...
+Typically, the (home) key produces the character 'H'.  So assuming that (home)=>'H', (end)=>'F', (up)=>'A', etc...
 the key mapping follows:
 
 * 1..5: mix;  higher values are more difficult.
 
-* <up>,i: north
-* <dn>,k: south
-* <rt>,l: east
-* <lt>,j: west
-* <home>,\,u: layer-up
-* <end>,/,o: layer-dn
+* (up),i: north
+* (dn),k: south
+* (rt),l: east
+* (lt),j: west
+* (home),\,u: layer-up
+* (end),/,o: layer-dn
 
 * h: help
 * q: quit
