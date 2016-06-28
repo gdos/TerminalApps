@@ -1,12 +1,18 @@
 # TerminalApps
 Fun puzzle games that run on any terminal on any OS.
 
-All source code is under "releases" named "termapps25jun16.tar"
+All source code is under "releases" named "termapps28jun16.tar"
 
 
-# TerminalApps v 1.0.1
+
+# TerminalApps v 1.0.2
 
 ## What's new:
+
+**ver 1.0.2 -- 28jun16**
+
+* found and used additional key-mapping associations.  In particular the arrow keys are now accepted since typically <up>=>'A', <rt>=>'C', etc.
+* created terminal-rush (rush.adb)...a terminal version of the well known traffic rush puzzle game.
 
 **ver 1.0.1 -- 25jun16**
 
@@ -21,7 +27,18 @@ All source code is under "releases" named "termapps25jun16.tar"
 
 ===============================================================
 ## Introduction
-TerminalApps contains two F.O.S.S. puzzle games that can be run on any terminal in any OS that has a gnat compiler.  Both puzzles work the same:
+TerminalApps contains F.O.S.S. puzzle games that can be run on any terminal in any OS that has a gnat compiler.  
+
+There are now 3 apps:  seven, a2z, rush.
+
+===============================================================
+### seven, a2z
+
+seven is a flat representation of a 2x2x2 cube with one missing that allows sliding permutations.  Here, the elements are labelled 1..7.
+
+a2z is a flat representation of a 3x3x3 cube with one missing that allows sliding permutations.  Thus, the elements are conveniently labelled with the english alphabet.
+
+Both the "a2z" and "seven" puzzles work the same:
 
 * note the original order, and blank location;
 * mix;
@@ -29,40 +46,46 @@ TerminalApps contains two F.O.S.S. puzzle games that can be run on any terminal 
 
 A character in an adjacent row, column, or layer may be moved to the empty space using the keyboard.
 
-The key mapping follows:
+Typically, the <home> key produces the character 'H'.  So assuming that <home>=>'H', <end>=>'F', <up>=>'A', etc...
+the key mapping follows:
 
 * 1..5: mix;  higher values are more difficult.
 
-* i: north
-* k: south
-* j: west
-* l: east
-* o: layer-dn
-* u: layer-up
+* <up>,i: north
+* <dn>,k: south
+* <rt>,l: east
+* <lt>,j: west
+* <home>,\,u: layer-up
+* <end>,/,o: layer-dn
 
 * h: help
 * q: quit
 
 
-===============================================================
-### seven
-Conceptually, this is a flat representation of a 2x2x2 cube with one missing that allows sliding permutations.  Here, the elements are labelled 1..7.
 
-### a2z
-Conceptually, this is a flat representation of a 3x3x3 cube with one missing that allows sliding permutations.  Thus, the elements are conveniently labelled with the english alphabet.
+
+### terminal-rush
+Horizontal and vertical strings of letters represent cars and trucks in a crowded parking garage.  The objective is to move them around lengthwise in order to be able to get car "a" to the exit, which is either at the right or top of the garage.  Note that the last digits in each puzzle name represents the minimum number of moves to win.
+
+Gameplay:  First, one selects a vehicle by typing its identifier letter.  Then use the arrow keys to move it.  Here, [capital] "H" toggles the help screen.  Note that manual selection is not always necessary as there is an auto-select mechanism for those times when only one selection may move in a given direction.  The "+" and "-" keys [next, previous] are used to cycle through the large number of predefined puzzles.
 
 ===============================================================
 ## Build Instructions:
-Manually install GNAT GPL from libre.adacore.com/download/.  If you don't like my key-mappings, edit the code as you like.  Then type:
+Manually install GNAT GPL from libre.adacore.com/download/.  If you don't like my key-mappings, edit the code as you like.
 
-* gnatmake seven
-* gnatmake a2z
+Next, edit the script "cmp.sh" so that the path to gnatmake is prepended to the PATH environment variable.  This script streamlines the build process by allowing auxilliary libraries and files to be neatly hidden in subdirectories.  And make sure it is executable.
+
+Then type:
+
+* cmp.sh seven
+* cmp.sh a2z
+* cmp.sh rush
 
 to create a command-line executables for your system.
 
 ===============================================================
 ## Running:
-Your terminal must accept the "clear" command, and must be at least 48 chars by 14 lines.  Simply type "seven" or "a2z" to begin.
+Your terminal must accept the "clear" command, and must be at least 48 chars by 14 lines.  Simply type "seven" or "a2z" or "rush" to begin.
 
 
 ===============================================================
@@ -84,6 +107,3 @@ TerminalApps is covered by the GNU GPL v3 as indicated in the sources:
 
  You may read the full text of the GNU General Public License
  at <http://www.gnu.org/licenses/>.
-
-
-
