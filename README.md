@@ -11,7 +11,7 @@ All source code is under "releases" named "termapps28jun16.tar"
 
 **ver 1.0.2 -- 28jun16**
 
-* found and used additional key-mapping associations.  In particular the arrow keys are now accepted since typically <up>=>'A', <rt>=>'C', etc.
+* found and used additional key-mapping associations.  In particular the arrow keys are now accepted since typically (up)=>'A', (rt)=>'C', etc.
 * created terminal-rush (rush.adb)...a terminal version of the well known traffic rush puzzle game.
 
 **ver 1.0.1 -- 25jun16**
