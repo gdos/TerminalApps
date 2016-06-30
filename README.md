@@ -1,13 +1,18 @@
 # TerminalApps
 Fun puzzle games that run on any terminal on any OS.
 
-All source code is under "releases" named "termapps28jun16.tar"
+All source code is under "releases" named "termapps30jun16.tar"
 
 
 
 # TerminalApps v 1.0.2
 
 ## What's new:
+
+**ver 1.0.3 -- 30jun16**
+
+* added a block slider puzzle TerminalBlock (bslid.adb) to support Klotski style games.
+
 
 **ver 1.0.2 -- 28jun16**
 
@@ -29,14 +34,14 @@ All source code is under "releases" named "termapps28jun16.tar"
 ## Introduction
 TerminalApps contains F.O.S.S. puzzle games that can be run on any terminal in any OS that has a gnat compiler.  
 
-There are now 3 apps:  seven, a2z, rush.
+There are now 4 apps:  seven, a2z, rush, bslid.
 
 ===============================================================
 ### seven, a2z
 
-seven is a flat representation of a 2x2x2 cube with one missing that allows sliding permutations.  Here, the elements are labelled 1..7.
+seven is a flat representation of a 2x2x2 cube with one missing that allows sliding permutations.  Here, the 8-1 elements are labelled 1..7.
 
-a2z is a flat representation of a 3x3x3 cube with one missing that allows sliding permutations.  Thus, the elements are conveniently labelled with the english alphabet.
+a2z is a flat representation of a 3x3x3 cube with one missing that allows sliding permutations.  The 27-1 elements are conveniently labelled with the english alphabet.
 
 Both the "a2z" and "seven" puzzles work the same:
 
@@ -58,7 +63,7 @@ the key mapping follows:
 * (home),\,u: layer-up
 * (end),/,o: layer-dn
 
-* h: help
+* ?: help
 * q: quit
 
 
@@ -67,25 +72,34 @@ the key mapping follows:
 ### terminal-rush
 Horizontal and vertical strings of letters represent cars and trucks in a crowded parking garage.  The objective is to move them around lengthwise in order to be able to get car "a" to the exit, which is either at the right or top of the garage.  Note that the last digits in each puzzle name represents the minimum number of moves to win.
 
-Gameplay:  First, one selects a vehicle by typing its identifier letter.  Then use the arrow keys to move it.  Here, [capital] "H" toggles the help screen.  Note that manual selection is not always necessary as there is an auto-select mechanism for those times when only one selection may move in a given direction.  The "+" and "-" keys [next, previous] are used to cycle through the large number of predefined puzzles.
+### terminal-block
+Rectangular blocks of letters can be moved wherever there is space.  The objective is to move the block labelled "a" to an indicated goal position.
+
+
+#### Gameplay:  
+First, one selects a block or vehicle by typing its identifier letter.  Then use the arrow keys to move it.  Here, "?" toggles the help screen.  Note that manual selection is not always necessary as there is an auto-select mechanism for those times when only one selection may move in a given direction.  The "+" and "-" keys [next, previous] are used to cycle through the large number of predefined puzzles.
+
+
+
 
 ===============================================================
 ## Build Instructions:
 Manually install GNAT GPL from libre.adacore.com/download/.  If you don't like my key-mappings, edit the code as you like.
 
-Next, edit the script "cmp.sh" so that the path to gnatmake is prepended to the PATH environment variable.  This script streamlines the build process by allowing auxilliary libraries and files to be neatly hidden in subdirectories.  And make sure it is executable.
+Next, edit the script "cmp.sh" so that the path to gnatmake is temporarily prepended to the PATH environment variable.  This script streamlines the build process by allowing auxilliary libraries and files to be neatly hidden in subdirectories.  And make sure it is executable.
 
 Then type:
 
 * cmp.sh seven
 * cmp.sh a2z
 * cmp.sh rush
+* cmp.sh bslid
 
 to create a command-line executables for your system.
 
 ===============================================================
 ## Running:
-Your terminal must accept the "clear" command, and must be at least 48 chars by 14 lines.  Simply type "seven" or "a2z" or "rush" to begin.
+Your terminal must accept the "clear" command, and must be at least 48 chars by 14 lines.  Simply type "seven", "a2z", "rush", or "bslid" to begin.
 
 
 ===============================================================
@@ -107,3 +121,5 @@ TerminalApps is covered by the GNU GPL v3 as indicated in the sources:
 
  You may read the full text of the GNU General Public License
  at <http://www.gnu.org/licenses/>.
+
+
