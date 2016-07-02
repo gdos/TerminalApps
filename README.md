@@ -9,7 +9,7 @@ All source code is under "releases" named "termapps3jul16.tar"
 
 ## What's new:
 
-**ver 1.0.3 -- 30jun16**
+**ver 1.0.3 -- 3jul16**
 
 * added a block slider puzzle TerminalBlock (bslid.adb) to support Klotski style games.
 
