@@ -1,7 +1,7 @@
 # TerminalApps
 Fun puzzle games that run on any terminal on any OS.
 
-All source code is under "releases" named "termapps30jun16.tar"
+All source code is under "releases" named "termapps3jul16.tar"
 
 
 
