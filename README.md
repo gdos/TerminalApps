@@ -1,5 +1,5 @@
 # TerminalApps
-Fun puzzle games that run on any terminal on any OS.
+Old school puzzle games that run on any terminal on any OS.
 
 All source code is under "releases...latest" named "termapps*.tar"
 
