@@ -1,17 +1,24 @@
 # TerminalApps
 Old school puzzle games that run in a terminal on any OS.
 
-All source code is under "releases...latest" named "termapps*.tar"
+All source code is under "releases...latest" named "termapps*.tar.gz"
 
 
-
-# TerminalApps v 1.0.2
+# TerminalApps v 1.0.4
 
 ## What's new:
+
+
+**ver 1.0.4 -- 5jul16**
+
+* added sokoban game.
+
 
 **ver 1.0.3 -- 3jul16**
 
 * added a block slider puzzle TerminalBlock (bslid.adb) to support Klotski style games.
+* Greater care taken to properly handle key-escape-codes.
+* Improved help screens.
 
 
 **ver 1.0.2 -- 28jun16**
@@ -34,7 +41,7 @@ All source code is under "releases...latest" named "termapps*.tar"
 ## Introduction
 TerminalApps contains F.O.S.S. puzzle games that can be run on any terminal in any OS that has a gnat compiler.  
 
-There are now 4 apps:  seven, a2z, rush, bslid.
+There are now 5 apps:  seven, a2z, rush, bslid, sokoban.
 
 ===============================================================
 ### seven, a2z
@@ -51,20 +58,20 @@ Both the "a2z" and "seven" puzzles work the same:
 
 A character in an adjacent row, column, or layer may be moved to the empty space using the keyboard.
 
-Typically, the (home) key produces the character 'H'.  So assuming that (home)=>'H', (end)=>'F', (up)=>'A', etc...
+Pressing the (home) key on a typical keyboard produces the character 'H'.  So assuming that (home)=>'H', (end)=>'F', (up)=>'A', etc...
 the key mapping follows:
 
-* 1..5: mix;  higher values are more difficult.
+* (1)..(5): mix;  higher values are more difficult.
 
-* (up),i: north
-* (dn),k: south
-* (rt),l: east
-* (lt),j: west
-* (home),\,u: layer-up
-* (end),/,o: layer-dn
+* (up),(i): north
+* (dn),(k): south
+* (rt),(l): east
+* (lt),(j): west
+* (home),(\),(u),(.),(-): layer-up
+* (end),(/),(o),(+): layer-dn
 
-* ?: help
-* q: quit
+* (?): help
+* (q): quit
 
 
 
@@ -80,7 +87,8 @@ Rectangular blocks of letters can be moved wherever there is space.  The objecti
 First, one selects a block or vehicle by typing its identifier letter.  Then use the arrow keys to move it.  Here, "?" toggles the help screen.  Note that manual selection is not always necessary as there is an auto-select mechanism for those times when only one selection may move in a given direction.  The "+" and "-" keys [next, previous] are used to cycle through the large number of predefined puzzles.
 
 
-
+### sokoban
+Move the pusher >< with the arrow keys in order to push all the boxes [] onto the goals :: in which case they look like {}.  Various other functions available on the help screen.  Includes a very large family of puzzle files.
 
 ===============================================================
 ## Build Instructions:
@@ -88,18 +96,11 @@ Manually install GNAT GPL from libre.adacore.com/download/.  If you don't like m
 
 Next, edit the script "cmp.sh" so that the path to gnatmake is temporarily prepended to the PATH environment variable.  This script streamlines the build process by allowing auxilliary libraries and files to be neatly hidden in subdirectories.  And make sure it is executable.
 
-Then type:
-
-* cmp.sh seven
-* cmp.sh a2z
-* cmp.sh rush
-* cmp.sh bslid
-
-to create a command-line executables for your system.
+Then type "cmp.sh game", where game is in the set {seven, a2z, rush, bslid, sokoban} to create a command-line executables for your system.
 
 ===============================================================
 ## Running:
-Your terminal must accept the "clear" command, and must be at least 48 chars by 14 lines.  Simply type "seven", "a2z", "rush", or "bslid" to begin.
+Your terminal must accept the "clear" command, and must be 50 chars wide by 20 lines.  Simply type the executable name to begin.
 
 
 ===============================================================
@@ -121,5 +122,3 @@ TerminalApps is covered by the GNU GPL v3 as indicated in the sources:
 
  You may read the full text of the GNU General Public License
  at <http://www.gnu.org/licenses/>.
-
-
