@@ -39,7 +39,7 @@ All source code is under "releases...latest" named "termapps*.tar.gz"
 
 ===============================================================
 ## Introduction
-TerminalApps contains F.O.S.S. puzzle games that can be run on any terminal in any OS that has a gnat compiler.  
+TerminalApps contains F.O.S.S. puzzle games that can be run on any terminal in any OS that has a gnat Ada compiler.  
 
 There are now 5 apps:  seven, a2z, rush, bslid, sokoban.
 
