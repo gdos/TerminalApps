@@ -4,9 +4,20 @@ Old school puzzle games that run in a terminal on any OS.
 All source code is under "releases...latest" named "termapps*.tar.gz"
 
 
-# TerminalApps v 1.0.4
+# TerminalApps v 1.0.6
 
 ## What's new:
+
+
+**ver 1.0.6 -- 11jul16**
+
+* fixed logic error in TerminalRush (rush.adb)
+
+
+**ver 1.0.5 -- 8jul16**
+
+* added sokoban solver (trbfs.cc).
+* added bslid solver (bfs.cc).
 
 
 **ver 1.0.4 -- 5jul16**
