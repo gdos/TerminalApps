@@ -1,3 +1,5 @@
+![screenshot](https://github.com/fastrgv/TerminalApps/blob/master/sok3.jpg)
+
 # TerminalApps
 Old school puzzle games that run in a terminal on any OS.
 
