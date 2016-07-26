@@ -7,9 +7,15 @@ All source code is under "releases...latest" named "termapps*.tar.gz"
 
 
 
-# TerminalApps v 1.0.7
+# TerminalApps v 1.0.8
 
 ## What's new:
+
+**ver 1.0.8 -- 27jul16**
+
+* added Terminal-DirtyDozen block slider (tdd.adb)
+* added restart option to tslid.adb, trush.adb
+* added Terminal-Pacman (tpac.adb)
 
 
 **ver 1.0.7 -- 16jul16**
@@ -62,9 +68,12 @@ All source code is under "releases...latest" named "termapps*.tar.gz"
 ## Introduction
 TerminalApps contains F.O.S.S. puzzle games that can be run on any terminal in any OS that has a gnat compiler.  
 
-There are 8 apps:  trush, tslid, t7, taz, tsok, tpan, thio, thio4
+There are 11 apps:  trush, tslid, t7, taz, tsok, tpan, thio, thio4, t9, tdd, tpac.
 
 ===============================================================
+
+### terminal-pacman (tpac.adb)
+A minimalist version of Pacman with 9 predefined levels.  Playable now, with further improvements expected.
 
 ### terminal-7 (t7.adb), terminal-A2Z (taz.adb)
 
@@ -169,6 +178,8 @@ TerminalApps is covered by the GNU GPL v3 as indicated in the sources:
 ----------------------------------------------
 ## Other Credits and Thanks:
 Serhiy Grabarchuk and Peter Grabarchuk for their "Hole in One", "Hole in One plus 4", and "Nine" puzzles.
+
+Mike Billars [michael@gmail.com] for his C-version of Pacman for the console, after which this Ada version was modelled (gnu gpl).
 
 ----------------------------------------------
 ## Best Download Site for all my games:
