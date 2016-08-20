@@ -6,10 +6,18 @@ Old school puzzle games that run in a terminal on any OS.
 All source code is under "releases...latest" named "termapps*.tar.gz"
 
 
-
-# TerminalApps v 1.0.8
+# TerminalApps v 1.0.9
 
 ## What's new:
+
+
+**ver 1.0.9 -- 20aug16**
+
+* added two sokoban solvers (puller.adb, ibox.adb).
+* added tslid solver (bfs.adb).
+* added trush solver (bfsr.adb).
+* improved pacman gameplay, collision-detection, randomization.
+
 
 **ver 1.0.8 -- 27jul16**
 
@@ -29,11 +37,6 @@ All source code is under "releases...latest" named "termapps*.tar.gz"
 
 * fixed logic error in TerminalRush (trush.adb)
 
-
-**ver 1.0.5 -- 8jul16**
-
-* added sokoban solver (trbfs.cc).
-* added tslid solver (bfs.cc).
 
 
 **ver 1.0.4 -- 5jul16**
@@ -68,10 +71,9 @@ All source code is under "releases...latest" named "termapps*.tar.gz"
 ## Introduction
 TerminalApps contains F.O.S.S. puzzle games that can be run on any terminal in any OS that has a gnat compiler.  
 
-There are 11 apps:  trush, tslid, t7, taz, tsok, tpan, thio, thio4, t9, tdd, tpac.
+There are 11 apps that use ascii characters only:  trush, tslid, t7, taz, tsok, tpan, thio, thio4, t9, tdd, tpac.
 
-===============================================================
-
+=====================================================================
 ### terminal-pacman (tpac.adb)
 A minimalist version of Pacman with 9 predefined levels.  Playable now, with further improvements expected.
 
@@ -111,11 +113,14 @@ the key mapping follows:
 
 Horizontal and vertical strings of letters represent cars and trucks in a crowded parking garage.  The objective is to move them around lengthwise in order to be able to get car "a" to the exit, which is either at the right or top of the garage.  Note that the last digits in each puzzle name represents the minimum number of moves to win.
 
-### terminal-block (tslid.adb)
+Also, a solver named bfsr has been added that works for puzzle files with the ".rush" filename extension.  The command line is "bfsr puzzle-file-name".  Compile it with the command "cmp.sh bfsr".
 
-Rectangular blocks of letters can be moved wherever there is space.  The objective is to move the block labelled "a" to an indicated goal position.
 
-Also, a tslid solver named bfs has been added.  The command line is "bfs puzzle-file-name".  Compile it with the command "ccc.sh bfs".
+### terminal-block (tslid.adb), terminal-dirtydozen (tdd.adb)
+
+Blocks of letters can be moved wherever there is space.  The objective is to move the block labelled "a" to an indicated goal position.
+
+Also, a solver named bfs has been added that works for puzzle files with the ".blok" filename extension.  The command line is "bfs puzzle-file-name".  Compile it with the command "cmp.sh bfs".
 
 
 #### Gameplay:  
@@ -126,11 +131,11 @@ First, one selects a block or vehicle by typing its identifier letter.  Then use
 
 Move the pusher >< with the arrow keys in order to push all the boxes [] onto the goals :: in which case they look like {}.  Various other functions available on the help screen.  Includes a very large family of puzzle files.
 
-A sokoban solver named trbfs has been added.  It uses a brute-force reverse breadth-first search with no heuristics and a splay tree to store and check for previously seen configurations.  The command line is "trbfs puzzle-file-name max-levels level-number".  Note that the max-levels is embedded into the puzzle file name.
+Two sokoban solvers named puller & ibox have been added.  The command line is "solver-name puzzle-file-name max-levels level-number".  Note that the max-levels are embedded into each puzzle file name.
 
-The output file (named similarly to the input file) contains directions from the set {u,d,l,r,U,D,L,R}, where upper case indicates a push.  It is size-limited to 17 or fewer boxes, and 128 or fewer interior puzzle positions.  Compile it with the command "ccc.sh trbfs".
+The output file (named similarly to the input file) contains directions from the set {u,d,l,r,U,D,L,R}, where upper case indicates a push.  It is size-limited to 17 or fewer boxes, and 128 or fewer interior puzzle positions.  Compile it with the command "cmp.sh puller" or "cmp.sh ibox".
 
-There are many cases this solver cannot handle, but it is pretty good at sovling certain types of puzzles, particularly the more dense ones.  It is not very good at the near-Lishout type, if you know what that means.
+There are many cases these solvers cannot handle, but they are pretty good at sovling certain types of puzzles, particularly the more dense ones.
 
 
 ### Terminal-HoleInOne (thio.adb, thio4.adb)
@@ -149,11 +154,11 @@ Manually install GNAT GPL from libre.adacore.com/download/.  If you don't like m
 
 Next, edit the script "cmp.sh" so that the path to gnatmake is temporarily prepended to the PATH environment variable.  This script streamlines the build process by allowing auxilliary libraries and files to be neatly hidden in subdirectories.  And make sure it is executable.
 
-Then type "cmp.sh game", where game is in the set {t7, taz, trush, tslid, tsok, tpan} to create a command-line executables for your system.
+Then type "cmp.sh game", where game is in the set {t7, taz, trush, tslid, tsok, tpan, thio, thio4, t9, tdd, tpac} to create a command-line executables for your system.
 
 ===============================================================
 ## Running:
-Your terminal must accept the "clear" command, and must be 50 chars wide by 20 lines.  Simply type the executable name to begin.
+Your terminal must accept the "clear" command, and must be 50 chars wide by 20 lines (57x35 for pacman).  Simply type the executable name to begin.
 
 ===============================================================
 ## Legal Mumbo Jumbo:
