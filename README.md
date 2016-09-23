@@ -3,7 +3,9 @@
 # TerminalApps
 Old school puzzle games that run in a terminal on any OS.
 
-All source code is under "releases...latest" named "Tapps.tar.gz"
+All source code is under "releases...latest" named "Tapps.tar.gz", or this link:
+
+https://github.com/fastrgv/TerminalApps/releases/download/v1.0.9/Tapps.tar.gz
 
 
 # TerminalApps v 1.0.9
