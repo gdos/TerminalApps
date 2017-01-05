@@ -8,7 +8,7 @@ All source code is under "releases...latest" named "Tapps.tar.gz", or this link:
 https://github.com/fastrgv/TerminalApps/releases/download/v1.1.0/trm5jan17.tar.gz
 
 
-# TerminalApps v 1.0.9
+# TerminalApps v 1.1.0
 
 ## What's new:
 
