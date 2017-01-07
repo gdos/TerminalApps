@@ -77,9 +77,16 @@ https://github.com/fastrgv/TerminalApps/releases/download/v1.1.0/trm5jan17.tar.g
 
 ===============================================================
 ## Introduction
-TerminalApps contains F.O.S.S. puzzle games that can be run on any terminal in any OS that has a gnat compiler.  
+TerminalApps contains games that run on OS-X and Gnu/Linux, but can also be built to run on any OS capable of installing the GNAT GPL Ada compiler.
 
-There are 11 apps that use ascii characters only:  trush, tslid, t7, taz, tsok, tpan, thio, thio4, t9, tdd, tpac.
+Includes Pacman and 10 puzzle games that use ascii characters only:  trush(rush-hour), tslid(klotski), t7(flat7), taz(flatAZ), tsok(sokoban), tpan(panama), thio(hole-in-one), thio4(hole-in-one+4), t9(nine), tdd(dirty-dozen), tpac(Pacman).
+
+Usable keys for all:
+
+* arrow-keys for movement;
+* (q)=quit
+* (?)=help toggle
+
 
 =====================================================================
 ### terminal-pacman (tpac.adb)
