@@ -5,18 +5,26 @@ Old school puzzle games that run in a terminal on any OS.
 
 All source code is under "releases...latest" named "Tapps.tar.gz", or this link:
 
-https://github.com/fastrgv/TerminalApps/releases/download/v1.1.0/trm5jan17.tar.gz
 
-
-# TerminalApps v 1.1.0
+# TerminalApps
 
 ## What's new:
 
+
+**ver 1.1.1 -- 2may17**
+
+* added DirtyDozen [external] solver (bfsl.adb) that handles L-shaped blocks.
+* embedded autosolvers initiated by the (=)-key into:
+	* tdd (DirtyDozen)
+	* trush (TrafficRush)
+	* tslid (BlockSliders)
+	* tsok (Sokoban)
+
+
 **ver 1.1.0 -- 5jan17**
 
-* Now supply prebuilt binaries for OS-X and Linux.  Look in ./bin/gnu/ or ./bin/osx/.
+* Now supply prebuilt binaries for OS-X and Linux;
 * Improved build system.
-
 
 
 **ver 1.0.9 -- 20aug16**
@@ -77,7 +85,7 @@ https://github.com/fastrgv/TerminalApps/releases/download/v1.1.0/trm5jan17.tar.g
 
 ===============================================================
 ## Introduction
-TerminalApps contains games that run on OS-X and Gnu/Linux, but can also be built to run on any OS capable of installing the GNAT GPL Ada compiler.
+TerminalApps contains games that run on OS-X and Gnu/Linux, but can also be rebuilt to run on any OS capable of installing the GNAT GPL Ada compiler.
 
 Includes Pacman and 10 puzzle games that use ascii characters only:  trush(rush-hour), tslid(klotski), t7(flat7), taz(flatAZ), tsok(sokoban), tpan(panama), thio(hole-in-one), thio4(hole-in-one+4), t9(nine), tdd(dirty-dozen), tpac(Pacman).
 
@@ -122,20 +130,17 @@ the key mapping follows:
 * (q): quit
 
 
-
-
 ### terminal-rush (trush.adb)
 
 Horizontal and vertical strings of letters represent cars and trucks in a crowded parking garage.  The objective is to move them around lengthwise in order to be able to get car "a" to the exit, which is either at the right or top of the garage.  Note that the last digits in each puzzle name represents the minimum number of moves to win.
 
-Also, a solver named bfsr has been added that works for puzzle files with the ".rush" filename extension.  The command line is "bfsr puzzle-file-name".  Compile it with the command "cmp.sh bfsr".
-
+Now, an autosolver is embedded into this game.  At any time you may press the (=)-key to begin stepping toward a solution.
 
 ### terminal-block (tslid.adb), terminal-dirtydozen (tdd.adb)
 
 Blocks of letters can be moved wherever there is space.  The objective is to move the block labelled "a" to an indicated goal position.
 
-Also, a solver named bfs has been added that works for puzzle files with the ".blok" filename extension.  The command line is "bfs puzzle-file-name".  Compile it with the command "cmp.sh bfs".
+Now, an autosolver is embedded into these games.  At any time you may press the (=)-key to begin stepping toward a solution.
 
 
 #### Gameplay:  
@@ -146,11 +151,13 @@ First, one selects a block or vehicle by typing its identifier letter.  Then use
 
 Move the pusher >< with the arrow keys in order to push all the boxes [] onto the goals :: in which case they look like {}.  Various other functions available on the help screen.  Includes a very large family of puzzle files.
 
-Two sokoban solvers named puller & ibox have been added.  The command line is "solver-name puzzle-file-name max-levels level-number".  Note that the max-levels are embedded into each puzzle file name.
+Two [external] sokoban solvers named puller & ibox have been added.  The command line is "solver-name puzzle-file-name max-levels level-number".  Note that the max-levels are embedded into each puzzle file name.
 
 The output file (named similarly to the input file) contains directions from the set {u,d,l,r,U,D,L,R}, where upper case indicates a push.  It is size-limited to 17 or fewer boxes, and 128 or fewer interior puzzle positions.  Compile it with the command "cmp.sh puller" or "cmp.sh ibox".
 
 There are many cases these solvers cannot handle, but they are pretty good at sovling certain types of puzzles, particularly the more dense ones.
+
+But now a time-limited solver is embedded into tsok.  At any time you may press the (=)-key to see if the solver can help you.  If so, you will be prompted to keep pressing that same key to proceed toward a solution.  No prompt means either the present state is unsolvable, or merely that the embedded algorithm failed.
 
 
 ### Terminal-HoleInOne (thio.adb, thio4.adb)
@@ -163,6 +170,12 @@ Move letters to spell "panama canal" !
 Reverse the order of the numbered blocks.
 
 
+===========================================================================
+## Compiler Scripts
+There are two scripts, lcmp.sh for Linux, and ocmp.sh for OS-X that are already setup for convenience.  They differ only in where the executables are put.  Now with 11 different precompiled binaries for each OS, there would be too much clutter if they were all put into the same place.  The references below that mention "cmp.sh" refer to the script appropriate to your operating system.
+
+Similarly, there are also two scripts that build everything at once called "lbuildall.sh" and "obuildall.sh".
+
 ===============================================================
 ## Build Instructions:
 Manually install GNAT GPL from libre.adacore.com/download/.  If you don't like my key-mappings, edit the code as you like.
@@ -173,14 +186,20 @@ Then type "cmp.sh game", where game is in the set {t7, taz, trush, tslid, tsok, 
 
 ===============================================================
 ## Running:
-Your terminal must accept the "clear" command, and must be 50 chars wide by 20 lines (57x35 for pacman).  Simply type the executable name to begin.
+Your terminal must accept the "clear" command, and must be 50 chars wide by 20 lines (57x35 for pacman).  Simply type the executable name to begin.  
+
+For example, on OSX, you would open a terminal, and cd to the install directory and type:
+
+./bin/osx/tsok
+
+to run the Sokoban game.
 
 ===============================================================
 ## Legal Mumbo Jumbo:
 
 TerminalApps is covered by the GNU GPL v3 as indicated in the sources:
 
- Copyright (C) 2016  <fastrgv@gmail.com>
+ Copyright (C) 2017  <fastrgv@gmail.com>
 
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
