@@ -5,6 +5,8 @@ Old school puzzle games that run in a terminal on any OS.
 
 All source code is under "releases...latest" named "Tapps.tar.gz", or this link:
 
+https://github.com/fastrgv/TerminalApps/releases/download/v1.1.1/term2may17.tar.gz
+
 
 # TerminalApps
 
