@@ -8,9 +8,17 @@ All source code is under "releases...latest", or this link:
 https://github.com/fastrgv/TerminalApps/releases/download/v1.1.1/trm4may17.tar.gz
 
 
+
 # TerminalApps
 
 ## What's new:
+
+
+**ver 1.1.2 -- 18oct17**
+
+* added keymaps for IJKL, WASD, when possible, eg. pacman;
+* improved, corrected pacman code;
+* minor correction to compilation scripts;
 
 
 **ver 1.1.1 -- 2may17**
@@ -100,7 +108,10 @@ Usable keys for all:
 
 =====================================================================
 ### terminal-pacman (tpac.adb)
-A minimalist version of Pacman with 9 predefined levels.  Playable now, with further improvements expected.
+A primitive version of Pacman with 9 predefined levels.
+
+For this game, keyboard setup is critical to playability.  One must have a very short key-delay and fast repeat setting.  The arrow keys, or wasd-keys, or ijkl-keys control movement.  The (x),(q) keys quit;  (p) pauses game.  Note that there is a parameter called "tick" inside tpac.adb that is currently set to 0.2 seconds.  Advanced users might want to adjust this number, then recompile.  It controls game speed (smaller implies faster).  Suggestions are welcome.
+
 
 ### terminal-7 (t7.adb), terminal-A2Z (taz.adb)
 
@@ -121,10 +132,10 @@ the key mapping follows:
 
 * (1)..(5): mix;  higher values are more difficult.
 
-* (up),(i): north
-* (dn),(k): south
-* (rt),(l): east
-* (lt),(j): west
+* (up),(i),(w): north
+* (dn),(k),(s): south
+* (rt),(l),(d): east
+* (lt),(j),(a): west
 * (home),(\),(u),(.),(-): layer-up
 * (end),(/),(o),(+): layer-dn
 
@@ -136,7 +147,7 @@ the key mapping follows:
 
 Horizontal and vertical strings of letters represent cars and trucks in a crowded parking garage.  The objective is to move them around lengthwise in order to be able to get car "a" to the exit, which is either at the right or top of the garage.  Note that the last digits in each puzzle name represents the minimum number of moves to win.
 
-Now, an autosolver is embedded into this game.  At any time you may press the (=)-key to begin stepping toward a solution.
+A stand alone autosolver, bfsr, is provided, but now, an autosolver is embedded into this game.  At any time you may press the (=)-key to begin stepping toward a solution.
 
 ### terminal-block (tslid.adb), terminal-dirtydozen (tdd.adb)
 
@@ -151,7 +162,7 @@ First, one selects a block or vehicle by typing its identifier letter.  Then use
 
 ### terminal-sokoban (tsok.adb)
 
-Move the pusher >< with the arrow keys in order to push all the boxes [] onto the goals :: in which case they look like {}.  Various other functions available on the help screen.  Includes a very large family of puzzle files.
+Move the pusher >< with the arrow keys in order to push all the boxes [] onto the goals :: in which case they look like {}.  Various other functions available on the help screen.  Includes a very large family of puzzle files.  Note that most any sokoban puzzle can become unsolvable after an unwise sequence of moves.
 
 Two [external] sokoban solvers named puller & ibox have been added.  The command line is "solver-name puzzle-file-name max-levels level-number".  Note that the max-levels are embedded into each puzzle file name.
 
@@ -159,7 +170,7 @@ The output file (named similarly to the input file) contains directions from the
 
 There are many cases these solvers cannot handle, but they are pretty good at sovling certain types of puzzles, particularly the more dense ones.
 
-But now a time-limited solver is embedded into tsok.  At any time you may press the (=)-key to see if the solver can help you.  If so, you will be prompted to keep pressing that same key to proceed toward a solution.  No prompt means either the present state is unsolvable, or merely that the embedded algorithm failed.
+But now a time-limited solver is embedded into tsok.  At any time you may press the (=)-key to see if the solver can help you.  If so, you will be prompted to keep pressing that same key to proceed toward a solution.  No prompt means either the present state is unsolvable, or merely that the embedded algorithm failed.  In this case, you can try to undo moves using the (u)-key until it again becomes solvable.
 
 
 ### Terminal-HoleInOne (thio.adb, thio4.adb)
@@ -180,11 +191,15 @@ Similarly, there are also two scripts that build everything at once called "lbui
 
 ===============================================================
 ## Build Instructions:
+Remember that prebuilt executables for GNU/Linux and Mac OS-X are already included.  If you want to rebuild...
+
 Manually install GNAT GPL from libre.adacore.com/download/.  If you don't like my key-mappings, edit the code as you like.
 
-Next, edit the script "cmp.sh" so that the path to gnatmake is temporarily prepended to the PATH environment variable.  This script streamlines the build process by allowing auxilliary libraries and files to be neatly hidden in subdirectories.  And make sure it is executable.
+Next, edit the script "[lo]cmp.sh" so that the path to gnatmake is temporarily prepended to the PATH environment variable.  This script streamlines the build process by allowing auxilliary files to be neatly hidden in subdirectories.  And make sure it is executable.
 
-Then type "cmp.sh game", where game is in the set {t7, taz, trush, tslid, tsok, tpan, thio, thio4, t9, tdd, tpac} to create a command-line executables for your system.
+Then type "[lo]cmp.sh game", where game is in the set {t7, taz, trush, tslid, tsok, tpan, thio, thio4, t9, tdd, tpac} to create a command-line executables for your system.
+
+Currently, there are two high-level build scripts:  lbuildall.sh for linux, and obuildall.sh for OSX.  They are pretty simple and should be easily converted to handle Microsoft Windows platforms.
 
 ===============================================================
 ## Running:
