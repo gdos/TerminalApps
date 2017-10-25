@@ -12,6 +12,11 @@ https://github.com/fastrgv/TerminalApps/releases/download/v1.1.2/trm18oct17.tar.
 
 ## What's new:
 
+**ver 1.1.3 -- 26oct17**
+
+* added prebuilt executables for msWindows;
+* added working build scripts for msWindows;
+
 
 **ver 1.1.2 -- 18oct17**
 
@@ -94,7 +99,7 @@ https://github.com/fastrgv/TerminalApps/releases/download/v1.1.2/trm18oct17.tar.
 
 ===============================================================
 ## Introduction
-TerminalApps contains games that run on OS-X and Gnu/Linux, but can also be rebuilt to run on any OS capable of installing the GNAT GPL Ada compiler.
+TerminalApps contains terminal [command-prompt] games that run on msWindows, OS-X and Gnu/Linux, and can also be rebuilt after installing the GNAT GPL Ada compiler.
 
 Includes Pacman and 10 puzzle games that use ascii characters only:  trush(rush-hour), tslid(klotski), t7(flat7), taz(flatAZ), tsok(sokoban), tpan(panama), thio(hole-in-one), thio4(hole-in-one+4), t9(nine), tdd(dirty-dozen), tpac(Pacman).
 
@@ -184,21 +189,21 @@ Reverse the order of the numbered blocks.
 
 ===========================================================================
 ## Compiler Scripts
-There are two scripts, lcmp.sh for Linux, and ocmp.sh for OS-X that are already setup for convenience.  They differ only in where the executables are put.  Now with 11 different precompiled binaries for each OS, there would be too much clutter if they were all put into the same place.  The references below that mention "cmp.sh" refer to the script appropriate to your operating system.
+There are three scripts, wbuildall.bat for msWindows, lbuildall.sh for Linux, and obuildall.sh for OS-X.  They differ in where the executables are put.  Now with so many different precompiled binaries for each OS, there would be too much clutter if they were all put into the same place.
 
-Similarly, there are also two scripts that build everything at once called "lbuildall.sh" and "obuildall.sh".
 
 ===============================================================
 ## Build Instructions:
-Remember that prebuilt executables for GNU/Linux and Mac OS-X are already included.  If you want to rebuild...
+Remember that prebuilt executables are already included.  If you want to rebuild...
 
 Manually install GNAT GPL from libre.adacore.com/download/.  If you don't like my key-mappings, edit the code as you like.
 
-Next, edit the script "[lo]cmp.sh" so that the path to gnatmake is temporarily prepended to the PATH environment variable.  This script streamlines the build process by allowing auxilliary files to be neatly hidden in subdirectories.  And make sure it is executable.
+Next, edit the scripts wcmp.bat or lcmp.sh or ocmp.sh so that the path to gnatmake is correct.  These scripts streamline the build process by allowing auxilliary files to be neatly hidden in subdirectories.  And make sure it is executable.
 
-Then type "[lo]cmp.sh game", where game is in the set {t7, taz, trush, tslid, tsok, tpan, thio, thio4, t9, tdd, tpac} to create a command-line executables for your system.
+Then type "[wlo]buildall" to create new command-line executables for your system.
 
-Currently, there are two high-level build scripts:  lbuildall.sh for linux, and obuildall.sh for OSX.  They are pretty simple and should be easily converted to handle Microsoft Windows platforms.
+
+
 
 ===============================================================
 ## Running:
