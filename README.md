@@ -207,7 +207,7 @@ Then type "[wlo]buildall" to create new command-line executables for your system
 
 ===============================================================
 ## Running:
-Your terminal must accept the "clear" command, and must be 50 chars wide by 20 lines (57x35 for pacman).  Simply type the executable name to begin.  
+Your terminal must be 50 chars wide by 20 lines (57x35 for pacman).  Simply type the executable name to begin.  
 
 For example, on OSX, you would open a terminal, and cd to the install directory and type:
 
