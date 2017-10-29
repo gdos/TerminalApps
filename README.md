@@ -5,7 +5,7 @@ Old school puzzle games that run in a terminal on any OS.
 
 All source code is under "releases...latest", or this link:
 
-https://github.com/fastrgv/TerminalApps/releases/download/v1.1.3/trm26oct17.tar.gz
+https://github.com/fastrgv/TerminalApps/releases/download/v1.1.3/trm29oct17.tar.gz
 
 
 # TerminalApps
