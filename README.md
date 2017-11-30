@@ -12,6 +12,13 @@ https://github.com/fastrgv/TerminalApps/releases/download/v1.1.3/trm29oct17.tar.
 
 ## What's new:
 
+**ver 1.1.4 -- 30nov17
+
+* now using the intrinsic file detection function:  Exists();
+* elliminated need for directory links, simplifying Windows install.
+* huge performance improvements by not erasing screens between redraws.
+
+
 **ver 1.1.3 -- 26oct17**
 
 * added prebuilt executables for msWindows;
