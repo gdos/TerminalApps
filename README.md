@@ -1,9 +1,9 @@
 ![screenshot](https://github.com/fastrgv/TerminalApps/blob/master/sok3.jpg)
 
 # TerminalApps
-Old school puzzle games that run in a terminal on any OS.
+Old school ascii character puzzle games that run in a terminal on Windows, OSX, & Linux.
 
-All source code is under "releases...latest", or this link:
+Executables & source code is under this link:
 
 https://github.com/fastrgv/TerminalApps/releases/download/v1.1.3/trm30nov17.tar.gz
 
