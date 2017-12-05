@@ -5,15 +5,16 @@ Old school ascii character puzzle games that run in a terminal on Windows, OSX, 
 
 Executables & source code is under this link:
 
-https://github.com/fastrgv/TerminalApps/releases/download/v1.1.3/te4dec17.tar.gz
+https://github.com/fastrgv/TerminalApps/releases/download/v1.1.3/te5dec17.tar.gz
 
 
 # TerminalApps
 
 ## What's new:
 
-**ver 1.1.4 -- 30nov17
+**ver 1.1.4 -- 5dec17
 
+* added DLLs required under Windows;
 * now using the intrinsic file detection function:  Exists();
 * elliminated need for directory links, simplifying Windows install.
 * huge performance improvements by not erasing screens between redraws.
