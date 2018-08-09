@@ -14,6 +14,10 @@ https://github.com/fastrgv/TerminalApps/releases/download/v1.1.5/te10dec.tar.gz
 
 ## What's new:
 
+**ver 1.1.6 -- 09aug18**
+
+* Fixed tsok to handle DOS-format resume file.
+* Corrected errors in autosolvers for rush & dirtydozen;
 
 **ver 1.1.5 -- 10dec17**
 
