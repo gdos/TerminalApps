@@ -14,6 +14,13 @@ https://github.com/fastrgv/TerminalApps/releases/download/v1.1.6/te9aug18.tar.gz
 
 ## What's new:
 
+**ver 1.1.7 -- 25nov18**
+
+* Using improve autosolver in tsok;
+* Improved autosolvers for trush, tslid, tdd.
+* Corrected error in autoselect logic;
+
+
 **ver 1.1.6 -- 09aug18**
 
 * Fixed tsok to handle DOS-format resume file.
