@@ -14,6 +14,12 @@ https://github.com/fastrgv/TerminalApps/releases/download/v1.1.7/te25nov18.tar.g
 
 ## What's new:
 
+**ver 1.1.8 -- 30nov18**
+
+* Made big improvement in Windows keyboard response by setting realtime mode programmatically;
+
+
+
 **ver 1.1.7 -- 25nov18**
 
 * Using improve autosolver in tsok;
