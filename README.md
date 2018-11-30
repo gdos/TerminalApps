@@ -5,7 +5,7 @@ Old school ascii character puzzle games that run in a terminal on Windows, OSX, 
 
 Executables & source code is under this link:
 
-https://github.com/fastrgv/TerminalApps/releases/download/v1.1.7/te25nov18.tar.gz
+https://github.com/fastrgv/TerminalApps/releases/download/v1.1.8/te30nov18.tar.gz
 
 
 
