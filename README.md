@@ -7,6 +7,9 @@ Executables & source code is under this link:
 
 https://github.com/fastrgv/TerminalApps/releases/download/v1.1.8/te31nov18.tar.gz
 
+or on Windows use:
+https://github.com/fastrgv/TerminalApps/releases/download/v1.1.8/te31nov18tar.zip
+
 
 
 
