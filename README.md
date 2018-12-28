@@ -13,14 +13,22 @@ https://github.com/fastrgv/TerminalApps/releases/download/v1.1.8/te31nov18tar.zi
 
 
 
+
 # TerminalApps
 
 ## What's new:
 
+
+**ver 1.2.0 -- 29dec18**
+
+* Now request only high-priority rather than realtime-priority;
+* Now deliver 7z archives for better compression and simplicity of extraction on all 3 platforms.
+
+
+
 **ver 1.1.8 -- 30nov18**
 
 * Made big improvement in Windows keyboard response by setting realtime mode programmatically;
-
 
 
 **ver 1.1.7 -- 25nov18**
@@ -30,37 +38,18 @@ https://github.com/fastrgv/TerminalApps/releases/download/v1.1.8/te31nov18tar.zi
 * Corrected error in autoselect logic;
 
 
-**ver 1.1.6 -- 09aug18**
-
-* Fixed tsok to handle DOS-format resume file.
-* Corrected errors in autosolvers for rush & dirtydozen;
-
-**ver 1.1.5 -- 10dec17**
-
-* improved pacman (tpac);
-* all games now runnable from home or bin/./ directory;
-* The script hipri.bat for Windows was added to fix terminal-freezes by opening a high priority command window for console games.
-* Also added scripts hipr.sh (linux & OSX) to run at high priority using "nice", if necessary.
-
-
-
-**ver 1.1.4 -- 5dec17**
-
-* added missing DLLs;
-* now using the intrinsic file detection function:  Exists();
-* elliminated need for directory links, simplifying Windows install.
-* huge performance improvements by not erasing screens between redraws.
-
-**ver 1.1.3 -- 29oct17**
-
 
 ===============================================================
 ## Introduction
 TerminalApps contains ascii-character games that run in a commandline terminal on msWindows, OS-X and Gnu/Linux. 
 
+Now with runtime-priority control of console terminal, if needed.
+
 They can also be rebuilt after installing the GNAT GPL Ada compiler.
 
 Includes RPNcalc, Pacman and 10 puzzle games that use ascii characters only:  trush(rush-hour), tslid(klotski), t7(flat7), taz(flatAZ), tsok(sokoban), tpan(panama), thio(hole-in-one), thio4(hole-in-one+4), t9(nine), tdd(dirty-dozen), tpac(Pacman).
+
+Keyboard setup is important.  You should have a short key-delay and fast repeat setting.  
 
 Usable keys for all:
 
@@ -135,7 +124,7 @@ A stand alone autosolver, bfsr, is provided, but now, an autosolver is embedded 
 
 Blocks of letters can be moved wherever there is space.  The objective is to move the block labelled "a" to an indicated goal position.
 
-Now, an autosolver is embedded into these games.  At any time you may press the (=)-key to begin stepping toward a solution.
+A stand alone autosolver, bfsl, works for these puzzles, but now, an autosolver is embedded into these games.  At any time you may press the (=)-key to begin stepping toward a solution.
 
 
 #### Gameplay:  
@@ -172,20 +161,24 @@ A cult classic.  Recalls the HP rpn functionality.  Type "rpn".
 ===============================================================
 ## Setup & Running:
 
-Unzip the archive.  On Windows, 7z [www.7-zip.org] works well for this;  but so does the intrinsic command "tar -xf [filename].tar.gz", which extracts everything into the current directory.
 
-Windows users may see some error messages (that may be ignored) pertaining to directory links.  Directory links are needed only on OSX & Linux.
+Mac users see "osx-setup.txt".
+Windows users see "windows-setup.txt".
+
+Unzip the archive.  On Windows, 7z [www.7-zip.org] works well for this.
 
 
-First resize the terminal as needed.  Your terminal must be 50 chars wide by 20 lines (57x35 for pacman).  
+Ensure your keyboard has a short key-delay and fast repeat.
 
-You might want to enlarge the Font so that the window becomes physically larger.  
+Minimize the size of your terminal window.  Your terminal must be 50 chars wide by 20 lines (57x35 for pacman).  
+
+Enlarge the Font so that the window fills your monitor.  
 
 Simply type the executable name to begin.  
 
 For example, on OSX, you would open a terminal, and cd to the install directory and type:  ./bin/osx/tsok   to run the Sokoban game.  You could also cd to the executable directory ./bin/osx/ then type:  tsok.
 
-NOTE:  Windows users should probably CD to .\bin\win\ then run the script "hipri.bat" to open a realtime-priority window in which to run apps.  (It seems that some hardware may cause terminal freezes at normal priority.)
+NOTE:  Windows users should probably CD to .\bin\win\ then run the script "hipri.bat" to open a realtime-priority window in which to run apps.  (It seems that some hardware may cause terminal freezes at normal priority.)  If that does not work, and the response is poor, try using the command "start /realtime [game].exe" where [game] is one of {t7,t9,taz,tdd,thio4,thio,tpac,tpan,trush,tslid,tsok}
 
 Similarly for Linux/OSX users, you can CD to ./bin/gnu/ then use the "nice" command to be a bit less nice and give each terminal game the highest real time priority.  For example, to run traffic rush at high priority type:  "nice --adjustment=-20 trush".  See ~/bin/gnu/hipr.sh, ~/bin/osx/hipr.sh
 
@@ -253,6 +246,27 @@ https://github.com/fastrgv?tab=repositories
 
 ----------------------------------------------
 ## Earlier Revision History:
+
+**ver 1.1.6 -- 10aug18**
+
+* Fixed tsok to handle DOS-format resume file.
+* Corrected errors in autosolvers for rush & dirty12;
+
+
+**ver 1.1.5 -- 10dec17**
+
+* improved pacman (tpac);
+* all games now runnable from home or bin/./ directory;
+* The script hipri.bat for Windows was added to fix terminal-freezes by opening a high priority command window for console games.
+* Also added scripts hipr.sh (linux & OSX) to run at high priority using "nice", if necessary.
+
+
+**ver 1.1.4 -- 5dec17**
+
+* added missing DLLs;
+* now using the intrinsic file detection function:  Exists();
+* elliminated need for directory links, simplifying Windows install.
+* huge performance improvements by not erasing screens between redraws.
 
 
 **ver 1.1.3 -- 29oct17**
