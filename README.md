@@ -5,10 +5,8 @@ Old school ascii character puzzle games that run in a terminal on Windows, OSX, 
 
 Executables & source code is under this link:
 
-https://github.com/fastrgv/TerminalApps/releases/download/v1.1.8/te31nov18.tar.gz
+https://github.com/fastrgv/TerminalApps/releases/download/v1.2.0/te29dec18.7z
 
-or on Windows use:
-https://github.com/fastrgv/TerminalApps/releases/download/v1.1.8/te31nov18tar.zip
 
 
 
